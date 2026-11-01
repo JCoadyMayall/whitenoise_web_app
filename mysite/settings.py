@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whitenoise',
-    'django_tailwind_cli'
+    'django_tailwind_cli',
+    'tailwind',
 ]
 
 MIDDLEWARE = [
