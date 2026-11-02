@@ -3,3 +3,5 @@
 @plugin "daisyui" {
     themes: synthwave --default;
 }
+
+@source "../../whitenoise/templates"
