@@ -1,19 +1,20 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>White Noise</title>
     <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div class="navbar bg-base-100 shadow-lg flex-1 gap-2">
+<div class="navbar bg-base-100 shadow-lg gap-2 justify-center">
     <div>
         <a class="btn btn-ghost text-xl">White Noise</a>
     </div>
-        <button class="btn btn-soft btn-error">Stop</button>
-    <div class="navbar-end">
+    <div class="mx-12">
+        <button id="stop-btn" class="btn btn-soft btn-error">Stop</button>
+    </div>
+    <div>
         <label class="flex cursor-pointer gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,44 +46,44 @@
         </label>
     </div>
 </div>
-<div class="m-4">
-    <div class="card card-border bg-base-100 w-96 shadow-xl glass">
-      <figure>
-        <img
-          src="{% static 'images/calming_rain.jpeg' %}"
-          alt="Calming Rain" />
-      </figure>
-      <div class="card-body items-center">
-        <h2 class="card-title">Calming Rain</h2>
-          <div class="flex flex-row justify-center">
-              <button name="play-btn" data-audio-src="{% static 'audio/calm_rain.mp3' %}"
-                      class="btn btn-soft btn-secondary m-4">
-                  ▶️
-              </button>
-              <button class="btn btn-soft btn-secondary m-4">⏹️</button>
+<div class="flex flex-row flex-wrap justify-center">
+    <div class="m-4">
+        <div class="card card-border bg-base-100 w-96 h-128 shadow-xl glass">
+          <figure>
+            <img
+              src="{% static 'images/calming_rain.jpeg' %}"
+              alt="Calming Rain" />
+          </figure>
+          <div class="card-body items-center">
+            <h2 class="card-title">Calming Rain</h2>
+              <div class="flex flex-row justify-center">
+                  <button name="play-btn" data-audio-src="{% static 'audio/calm_rain.mp3' %}"
+                          class="btn btn-soft btn-secondary m-4">
+                      ▶️
+                  </button>
+              </div>
           </div>
-      </div>
+        </div>
+    </div>
+    <div class="m-4">
+        <div class="card card-border bg-base-100 w-96 max-h-128 shadow-xl glass">
+          <figure>
+            <img
+              src="{% static 'images/indoor_rain.jpeg' %}"
+              alt="Sound of rain from indoors." />
+          </figure>
+          <div class="card-body items-center">
+            <h2 class="card-title">Indoor Rain</h2>
+              <div class="flex flex-row justify-center">
+                  <button name="play-btn" data-audio-src="{% static 'audio/indoor_rain.mp3' %}"
+                          class="btn btn-soft btn-secondary m-4">
+                      ▶️
+                  </button>
+              </div>
+          </div>
+        </div>
     </div>
 </div>
-<div class="m-4">
-    <div class="card card-border bg-base-100 w-96 shadow-xl glass">
-      <figure>
-        <img
-          src="{% static 'images/calming_rain.jpeg' %}"
-          alt="Calming Rain" />
-      </figure>
-      <div class="card-body items-center">
-        <h2 class="card-title">Calming Rain</h2>
-          <div class="flex flex-row justify-center">
-              <button name="play-btn" data-audio-src="{% static 'audio/indoor_rain.mp3' %}"
-                      class="btn btn-soft btn-secondary m-4">
-                  ▶️
-              </button>
-              <button class="btn btn-soft btn-secondary m-4">⏹️</button>
-          </div>
-      </div>
-    </div>
-</div>
-<script src="{% static 'js/playAudio.js' %}"></script>
+<script src="{% static 'js/playStopAudio.js' %}"></script>
 </body>
 </html>
