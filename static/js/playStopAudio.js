@@ -8,17 +8,31 @@ function createSound(src, { loop = true } = {}) {
   return audio;
 }
 
+function stopAllSounds() {
+  sounds.forEach((audio) => {
+    audio.pause();
+    audio.currentTime = 0;
+  });
+}
+
 const playBtns = document.getElementsByName("play-btn");
 
 playBtns.forEach((btn) => {
-  console.log(btn)
   const sound = createSound(btn.dataset.audioSrc);
+  const stopBtn = btn.parentElement.querySelector("[name='stop-btn']");
 
   btn.addEventListener("click", () => {
-  sound.currentTime = 0;
-  sound.play();
+    stopAllSounds();
+    sound.play();
+  });
+
+  if (stopBtn) {
+    stopBtn.addEventListener("click", () => {
+      sound.pause();
+      sound.currentTime = 0;
+    });
+  }
 });
-})
 
 document.getElementById("stop-btn").addEventListener("click", () => {
   sounds.forEach((audio) => {
