@@ -6,8 +6,8 @@
     <title>White Noise</title>
     <link href="{% static 'css/output.css' %}" rel="stylesheet" type="text/css" />
 </head>
-<body>
-<div class="navbar bg-base-100 shadow-lg gap-2 justify-center">
+<body class="min-h-screen flex flex-col">
+<div class="navbar bg-base-100 shadow-lg gap-2 justify-center sticky top-0 z-50">
     <div>
         <a class="btn btn-ghost text-xl">White Noise</a>
     </div>
@@ -46,8 +46,24 @@
         </label>
     </div>
 </div>
+<main class="flex-1">
 {% block content %}
 {% endblock %}
+</main>
+<footer class="footer footer-horizontal bg-neutral text-neutral-content items-center p-4">
+  <aside class="grid-flow-col items-center">
+    <img src="../../static/images/robin.svg" alt="Robin SVG" width="64" height="64" />
+    <p>Jacob C-M © {% now "Y" %} - All right reserved</p>
+  </aside>
+  <nav class="grid-flow-col gap-4 justify-self-end">
+    <a>
+        <img src="../../static/images/linkedin.svg" alt="LinkedIn Logo" width="48" height="48" />
+    </a>
+    <a>
+        <img src="../../static/images/github.svg" alt="LinkedIn Logo" width="48" height="48" />
+    </a>
+  </nav>
+</footer>
 <script src="{% static 'js/playStopAudio.js' %}"></script>
 </body>
 </html>
