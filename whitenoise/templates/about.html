@@ -1,4 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="hero bg-base-200 min-h-screen">
+  <div class="hero-content flex-col lg:flex-row">
+    <img
+      alt="Jacob Coady-Mayall"
+      src="../../static/images/jcm.jpeg"
+      class="max-w-sm rounded-lg shadow-2xl"
+    />
+    <div>
+      <h1 class="text-5xl font-bold">About This Project</h1>
+      <p class="py-6 w-128">
+        My name is Jacob Coady-Mayall, I am an aspiring Python developer pursuing a self-taught path.
+      </p>
+      <p class="w-128">
+        The purpose of this project was to build a simple Django app and deploy it. All other white noise apps
+          that I had used were riddled with ads which would, at times, disrupt my sleeping baby. In practising
+          and demonstrating my use of Django, I figured I might as well make something useful for me!
+      </p>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
