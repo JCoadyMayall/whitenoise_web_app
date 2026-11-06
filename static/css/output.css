@@ -11,7 +11,6 @@
     --color-black: #000;
     --spacing: 0.25rem;
     --container-sm: 24rem;
-    --container-6xl: 72rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -10764,9 +10763,6 @@
   .m-4 {
     margin: calc(var(--spacing) * 4);
   }
-  .m-12 {
-    margin: calc(var(--spacing) * 12);
-  }
   @layer daisyui.l1.l2.l3 {
     .mockup-browser .mockup-browser-toolbar {
       margin-block: calc(0.25rem * 3);
@@ -11198,11 +11194,6 @@
       opacity: 60%;
       font-weight: 600;
     }
-  }
-  .mb-3 {
-    margin-bottom: calc(var(--spacing) * 3);
-  }
-  @layer daisyui.l1.l2.l3 {
     .carousel-item {
       box-sizing: content-box;
       display: flex;
@@ -12129,9 +12120,6 @@
       width: calc(var(--size) * 0.5);
     }
   }
-  .w-24 {
-    width: calc(var(--spacing) * 24);
-  }
   .w-96 {
     width: calc(var(--spacing) * 96);
   }
@@ -12149,9 +12137,6 @@
   }
   .flex-grow {
     flex-grow: 1;
-  }
-  .basis-auto {
-    flex-basis: auto;
   }
   .basis-full {
     flex-basis: 100%;
@@ -12588,9 +12573,6 @@
   }
   .justify-center {
     justify-content: center;
-  }
-  .justify-start {
-    justify-content: flex-start;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -13525,15 +13507,6 @@
       --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
       --btn-border-style: dashed;
     }
-    .btn-outline {
-      --btn-bg: #0000;
-      color: var(--btn-rest-fg, var(--btn-color, var(--color-base-content)));
-      --btn-border: var(--btn-color, var(--color-base-content));
-      --btn-border-style: solid;
-      background-image: none;
-      --btn-inset: 0 0 0 0 oklch(0% 0 0/0);
-      --btn-shadow: 0 0 0 0 oklch(0% 0 0/0);
-    }
     .btn-soft {
       --btn-bg: var(--btn-color, var(--color-base-content));
     }
@@ -13842,9 +13815,6 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
-  }
-  .py-12 {
-    padding-block: calc(var(--spacing) * 12);
   }
   @layer daisyui.l1.l2 {
     .file-input-xl {
@@ -15294,11 +15264,6 @@
   @layer daisyui.l1.l2.l3 {
     .aura:has( > .checkbox,  > .toggle,  > .badge) {
       --aura-radius: var(--radius-selector);
-    }
-  }
-  @media (width >= 48rem) {
-    .md\:basis-auto {
-      flex-basis: auto;
     }
   }
   @media (width >= 64rem) {

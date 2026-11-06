@@ -1,0 +1,5 @@
+django==6.1.3
+django-tailwind-cli==4.8.2
+tailwindcss==0.0.1
+pytailwindcss==0.4.2
+python-dotenv==1.2.4
