@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class WhitenoiseConfig(AppConfig):
-    name = 'whitenoise'
+    name = 'whitenoise_app'
