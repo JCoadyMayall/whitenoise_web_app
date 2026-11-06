@@ -18,10 +18,10 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv("DEBUG", "False").lower() in ("false", "1", "no")
 
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["whitenoise-app.onrender.com/"]
 
 
-# CSRF_TRUSTED_ORIGINS = ["https://"]
+CSRF_TRUSTED_ORIGINS = ["https://whitenoise-app.onrender.com/"]
 
 
 # Application definition
