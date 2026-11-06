@@ -1,0 +1,22 @@
+# Version control and editor files
+.git
+.idea
+
+# Python virtual environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies and generated npm logs
+node_modules/
+npm-debug.log*
+
+# Local development artifacts
+.DS_Store
+Thumbs.db
